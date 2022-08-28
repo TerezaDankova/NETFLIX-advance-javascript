@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="./styles.css">
+    <title>NETFLIX</title>
+</head>
+
+<body>
+
+  <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark px-4 mt-1" style="height: 50px;">
+        <a class="navbar-brand pl-2" href="#"><img src="./media/netflix_logo.png" alt="netflix-logo" height="50"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" style="font-size: 14px; font-weight: 400;">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">TV Shows<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Recently Added</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">My List</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/backoffice.html">Back Office</a>
+                </li>
+                
+            </ul>
+            <div class="mr-4">
+                <i class="bi bi-search mr-2"></i>
+                <span class="d-inline-block text-truncate align-middle text-light" style="font-size: 12px;"> KIDS</span>
+                <div class="dropdown d-inline-block">
+                    <button class="btn text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"style="width: 100px;">
+                        <i class="bi bi-bell-fill mr-2"></i>
+                        <img class="mr-2 align-middle" src="./media/avatar.png" style="width: 25px;">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">Sci-fi</a>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+ <!--first row container-->
+
+    <div class="container-fluid px-5 ">
+
+        <div class="section-title mb-2 mt-4">
+           
+           <h3 class="d-inline-block mb-0 align-top mr-4">TV Shows</h3>
+          
+           <div class="dropdown d-inline-block">
+              <button class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="width: 85px; height: 40px; font-size: 14px; font-weight: lighter;">
+                Genres
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Sci-fi</a>
+                <a class="dropdown-item" href="#">Crime</a>
+                <a class="dropdown-item" href="#">Action</a>
+              </div>
+           </div>
+        </div>
+        <div class="section-title mb-2 mt-4">
+           
+            <h6 class="d-inline-block mb-0 align-top"> </h6>
+           
+        </div>
+
+  <!--NEW CREATED SECTION-->
+
+        <section id="scifiMovies">
+          <div id="container-movies" class="container mb-5">
+              <h4 class="text-white">Sci-Fi Movies</h4>
+              <!--
+              <div class="col-sm-6 col-md-2">
+                <div class="movie-card position-relative">
+                  <img src="./media/media7.webp" alt="" class="img-fluid pad">
+                  <img src="./media/netflix_logo.png" class="netflix-badge position-absolute" alt="prime badge" style="top: 0; left: 0; width: 20%;">
+                </div>
+              </div>
+                -->
+              <div class="row mx-n1 mt-1" id="Sci-Fi">
+              </div>
+          </div>
+      </section>
+      <section id="crimeMovies">
+          <div class="container mb-5">
+              <h4 class="text-white">Crime Movies</h4>
+              <div class="row mx-n1 mt-1" id="Crime">
+              </div>
+          </div>
+      </section>
+      <section id="actionMovies">
+          <div class="container mb-5">
+              <h4 class="text-white">Action Movies</h4>
+              <div class="row mx-n1 mt-1" id="Action">
+              </div>
+          </div>
+      </section>
+
+      <div class="section-title mb-2 mt-4">
+           
+            <h6 class="d-inline-block mb-0 align-top"> Trending Now</h6>
+           
+      </div>
+
+
+       <div class="row no-gutters" style="row-gap:20px; width: 100%;">
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media14.webp" alt="" class="img-fluid pad">
+                <img src="./media/netflix_logo.png" class="netflix-badge position-absolute" alt="prime badge" style="top: 0; left: 0; width: 20%;">
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media1.jpg" alt="" class="img-fluid pad">
+                
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media2.webp" alt="" class="img-fluid pad">
+                <img src="./media/netflix_logo.png" class="netflix-badge position-absolute" alt="prime badge" style="top: 0; left: 0; width: 20%;">
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media3.webp" alt="" class="img-fluid pad">
+                <img src="./media/netflix_logo.png" class="netflix-badge position-absolute" alt="prime badge" style="top: 0; left: 0; width: 20%;">
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media4.jpg" alt="" class="img-fluid pad">
+              
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media5.webp" alt="" class="img-fluid pad">
+               
+              </div>
+            </div>
+        </div>
+
+        <div class="section-title mb-2 mt-4">
+           
+          <h6 class="d-inline-block mb-0 align-top">Watch It Again</h6>
+
+        </div>
+
+        <div class="row no-gutters" style="row-gap:20px; width: 100%;">
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media6.jpg" alt="" class="img-fluid pad">
+                
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media7.webp" alt="" class="img-fluid pad">
+                <img src="./media/netflix_logo.png" class="netflix-badge position-absolute" alt="prime badge" style="top: 0; left: 0; width: 20%;">
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media8.webp" alt="" class="img-fluid pad">
+                <img src="./media/netflix_logo.png" class="netflix-badge position-absolute" alt="prime badge" style="top: 0; left: 0; width: 20%;">
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media9.jpg" alt="" class="img-fluid pad">
+                
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media10.jpg" alt="" class="img-fluid pad">
+                
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media11.jpg" alt="" class="img-fluid pad">
+                
+              </div>
+            </div>    
+        </div>
+
+        <div class="section-title mb-2 mt-4">
+           
+          <h6 class="d-inline-block mb-0 align-top">New Releases</h6>
+          
+        </div>
+
+        <div class="row no-gutters" style="row-gap:20px; width: 100%;">
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media12.jpg" alt="" class="img-fluid pad">
+                
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media13.jpg" alt="" class="img-fluid pad">
+                
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media15.jpg" alt="" class="img-fluid pad">
+                
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media16.webp" alt="" class="img-fluid pad">
+                <img src="./media/netflix_logo.png" class="netflix-badge position-absolute" alt="prime badge" style="top: 0; left: 0; width: 20%;">
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media17.jpg" alt="" class="img-fluid pad">
+                
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="movie-card position-relative">
+                <img src="./media/media19.webp" alt="" class="img-fluid pad">
+                <img src="./media/netflix_logo.png" class="netflix-badge position-absolute" alt="prime badge" style="top: 0; left: 0; width: 20%;">
+              </div>
+        </div>
+    </div>
+
+
+   <!--footer-->
+
+  <footer>
+
+  <div class="gradient text-secondary" style="min-height: 25vh; padding-left: 400px; padding-right: 400px; padding-top: 50px;">
+    
+    <div class="d-flex justify-content-start" style="font-size: 18px;">
+      <i class="bi bi-facebook  mr-3" ></i>
+      <i class="bi bi-instagram mr-3" ></i>
+      <i class="bi bi-twitter mr-3" ></i>
+      <i class="bi bi-youtube" ></i>
+
+
+    </div>
+    <div class="d-flex justify-content-between mt-2" style="font-size: 10px;">
+        <div class="">
+          <ul style="list-style:none;padding: 0; margin: 0;">
+              <li>Audio and Subtitles</li>
+              <li>Media Center</li>
+              <li>Privacy</li>
+              <li>Contact Us</li>
+        </ul>
+        </div>
+        <div class="">
+          <ul style="list-style:none">
+              <li >Audio Description</li>
+              <li>Investor Relation</li>
+              <li>Legal Notices</li>
+          </ul>
+        </div>
+        <div class="">
+          <ul style="list-style:none">
+              <li>Help Center</li>
+              <li>Jobs</li>
+              <li>Cookie Preference</li>
+          </ul>
+        </div>
+        <div class="">
+          <ul style="list-style:none">
+              <li>Gift Cards</li>
+              <li>Terms of Use</li>
+              <li>Corporate Information</li>
+          </ul>
+        </div>
+    </div>
+    <div class="d-flex justify-content-start mt-2 mb-2">
+      <button type="button" class="btn btn-outline-secondary btn-sm" style="font-size: 10px;">Secondary</button>
+
+    </div>
+    <div class="d-flex justify-content-start" style="font-size: 10px;">
+      <i class="bi bi-c-circle mr-1"></i><span>1997-2022 Netflix, Inc. {JJGZ674FF68898Z8GI}</span>
+    </div>
+  </div>
+
+  </footer>
+
+  <div id="toaster" class="gradient d-none">
+      I'm a notification
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+  crossorigin="anonymous"></script>
+
+
+
+  <script>
+
+          const dataNetflix= {
+                                  name: "terezadan",
+                                  description: "title",
+                                  category: "category",
+                                  imageUrl: "image",
+                                 }
+
+         fetch('https://striveschool-api.herokuapp.com/api/movies/', {
+                method: "POST",
+                headers: {
+                  'Content-Type': 'application/json',
+                  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzA3YTZiMzFlYjc2ZDAwMTUxNTAyNDgiLCJpYXQiOjE2NjE1MDYyODksImV4cCI6MTY2MjcxNTg4OX0.zeLGsDx4YQgxpr8XJoPtMuzywrseiS3GMR1nEgPYbLY",
+                },
+                body: JSON.stringify(dataNetflix)
+              }).then((res) => {
+                console.log("this is res", res)
+
+              }).catch((err) => {
+                console.log(err)
+              })
+            
+
+// const dataNetflix= {
+//               name: "jkkoopppkmnkmkmlllllllokokokk8964",
+//               description: "title",
+//               category: "category",
+//               imageUrl: "image",
+//     }
+
+//     fetch('https://striveschool-api.herokuapp.com/api/movies/', {
+//       method: "POST",
+//       headers: {
+//         'Content-Type': 'application/json',
+//         "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzA3YTZiMzFlYjc2ZDAwMTUxNTAyNDgiLCJpYXQiOjE2NjE1MDYyODksImV4cCI6MTY2MjcxNTg4OX0.zeLGsDx4YQgxpr8XJoPtMuzywrseiS3GMR1nEgPYbLY"
+//       },
+//       body: JSON.stringify(dataNetflix)
+//     }).then((res) => {
+//       console.log("this is res", res)
+
+//     }).catch((err) => {
+//       console.log(err)
+//     })
+
+//   const listMovies = () => {
+//             const newMovie = {
+//                               name: "jajdscbsbvcooaokdokencvn",
+//                               description: "title",
+//                               category: "category",
+//                               imageUrl: "image",
+//                              }
+//   fetch("https://striveschool-api.herokuapp.com/api/movies", { method: "POST", body: JSON.stringify(newMovie), headers: { "Content-Type":"application/json", "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzA3YTZiMzFlYjc2ZDAwMTUxNTAyNDgiLCJpYXQiOjE2NjE1MDYyODksImV4cCI6MTY2MjcxNTg4OX0.zeLGsDx4YQgxpr8XJoPtMuzywrseiS3GMR1nEgPYbLY",
+// }})
+// .then (response => response.json())
+// .then(movies => {
+//    for(i = 0 ; movies.lenght; i++){
+//     console(movies)
+//      const movie = movies.lenght[i]
+//      console(movie)
+//    }
+// })
+// }
+
+
+// const displayMovies = async (genre) => {
+//             try { const options = { method: "POST", headers: { "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzA3YTZiMzFlYjc2ZDAwMTUxNTAyNDgiLCJpYXQiOjE2NjE1MDYyODksImV4cCI6MTY2MjcxNTg4OX0.zeLGsDx4YQgxpr8XJoPtMuzywrseiS3GMR1nEgPYbLY",},};
+//                   const response = await fetch(`https://striveschool-api.herokuapp.com/api/movies/`,
+//                   options
+//                 );
+//                 const movies = await response.json();
+
+//                 movies.forEach((movie) => {
+
+//                     const genderMovie = document.getElementById(`${genre}`)
+
+//                     genderMovie.innerHTML += `<div class="col-12 col-sm-6 col-md-4 col-lg-2 px-1">
+//                                                 <a href="/backoffice.html?_id=${movie._id}&category=${movie.category}">
+//                                                         <img src=${movie.imageUrl} class="card-img-top movie-images rounded" alt= ${movie.name}>
+//                                                 </a>
+//                                             </div>`;
+                                          
+//                 });
+//             } catch (error) {
+//                 console.log(error);
+//             }
+//         };
+
+//         window.onload = () => {
+//             displayMovies("Sci-Fi")
+//             displayMovies("Crime")
+//             displayMovies("Action")
+//         }
+  
+
+  </script>
+</body>
+
+</html>
